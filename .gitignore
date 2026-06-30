@@ -1,0 +1,11 @@
+# Do not upload intermediate files
+*.hwpx
+*.xml
+*.xsl
+
+# Do not upload equation image files
+*.gif
+
+# Do not upload python cache
+__pycache__/
+*.pyc
