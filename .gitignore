@@ -3,8 +3,9 @@
 *.xml
 *.xsl
 
-# Do not upload equation image files
+# Do not upload these image files
 *.gif
+*.wmf
 
 # Do not upload python cache
 __pycache__/
