@@ -93,7 +93,7 @@ sup {
 }
 
 .figure {
-    margin: 2em 0;
+    margin: 0.5em 0;
     text-align: center;
 }
 
@@ -103,16 +103,60 @@ sup {
 }
 
 .figure figcaption {
-    margin-top: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    margin-top: 2em;
     font-size: 0.95em;
-    color: #444;
+    color: #222;
 }
 
-.note-source-unit {
+.table-wrap {
+    margin: 2em 0;
+}
+
+.table-caption {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    color: #222
+}
+
+.table-unit {
+    text-align: right;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.data-table th,
+.data-table td {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 0.45em 0.6em;
+    text-align: center;
+}
+
+.data-table thead th {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: 2px solid #000;
+}
+
+.table-note {
     font-size: 0.85em;
-    color: #555;
     line-height: 1.5;
-    margin: 0.4em 0;
+    margin-top: 0.2em;
+    color: #333;
 }
 </style>
 </head>
@@ -168,7 +212,47 @@ sup {
 <p>이 같은 재정적, 제도적 지원에 힘입어 설계, 칩 생산, 생산설비, 소재 부품 장비 등 분야별로 독자적인 생태계를 구축하고 있다(구기보•유은정, 2025). 여전히 네덜란드의 첨단 생산설비를 확보하지 못해 첨단 공정 반도체 생산에 한계가 있고 미국의 반도체 설계 기업의 도구 사용에 제한이 있지만 각 분야가 양적으로 성장하고 있다.</p>
 <h3>2) 중국의 반도체 생산 규모</h3>
 <p>중국은 첨단 미세 공정(7nm 이하)의 경우 미국 등의 장비 반입 규제로 생산에 제한받고 있으나, 자동차, 가전, IoT 등에 사용하는 28nm 이상 레거시 공정 분야에서 생산량을 대폭 확대해 왔다. 2010년 중국 반도체 생산액과 세계 비중은 150억 달러와 5%에 불과하였으나 빠르게 성장하면서 2025년 850억 달러와 16.3%에 달하였다.</p>
-<div class="placeholder">[Table omitted (see PDF): &lt;표 1&gt; 중국의 반도체 생산액과 비중]</div>
+<div class="table-wrap">
+  <div class="table-caption">&lt;표 1&gt; 중국의 반도체 생산액과 비중</div>
+  <div class="table-unit">단위: 10억 달러, %</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>연도</th>
+        <th>중국</th>
+        <th>세계</th>
+        <th>중국 비중</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2010</td>
+        <td>15</td>
+        <td>298</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>2015</td>
+        <td>35</td>
+        <td>335</td>
+        <td>10.4</td>
+      </tr>
+      <tr>
+        <td>2020</td>
+        <td>65</td>
+        <td>440</td>
+        <td>14.8</td>
+      </tr>
+      <tr>
+        <td>2025</td>
+        <td>85</td>
+        <td>520</td>
+        <td>16.3</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table-note">* 자료 : SIA, 2026</div>
+</div>
 <h3>3) 제재 기업의 부상</h3>
 <p>미국 정부의 제재에도 불구하고 중국 정부의 강력한 지원, 우호적인 시장 환경 등에 힘입어 중국 반도체 관련 기업들이 기술수준이 빠르게 상승하고 우수한 경영실적을 기록하였다.</p>
 <p>화웨이는 자회사인 하이실리콘을 통해 자체적으로 AI 반도체 칩을 설계하였으며, 꾸준히 성능이 향상된 칩을 출시하였다. 화웨이는 2018년 어센드 310(Ascend 310)에 이어 2019년 TSMC의 7nm 공정을 이용해 고성능 AI 학습용 반도체인 에센드 910을 제작하였다. 미국의 제재 후에는 SMIC와 협력하여 2023년 대형 언어 모델(LLM) 수요에 맞추어 어센드 910B를 출시하였는데, 당시 중국 빅테크 기업들이 엔비디아 칩을 구매할 수 없게 되자 어센드 910B를 대거 구매하였다. 2025년에는 엔비디아의 H100에 상응하는 어센드 910C를 출시하였다(HUAWEI, 2025). 중국 AI 산업이 빠르게 발전하고 중국 정부가 엔비디아의 반도체 칩에 대한 수입을 통제하면서 화웨이는 AI 칩에서 꾸준한 매출을 올렸다.</p>
@@ -177,18 +261,19 @@ sup {
 <figcaption>&lt;그림 1&gt; 2025년 4분기 글로벌 메모리 시장 점유율(단위: %)</figcaption>
 <img src="PIC1129001191.BMP" alt="&lt;그림 1&gt; 2025년 4분기 글로벌 메모리 시장 점유율(단위: %)" style="width:70%; max-width:100%; height:auto;">
 </figure>
-<p class="note-source-unit">* 자료 : 카운터포인트 리서치. (김재현(그래픽 김지영), 2026) 재인용</p>
+<p class="table-note">* 자료 : 카운터포인트 리서치. (김재현(그래픽 김지영), 2026) 재인용</p>
 <figure class="figure">
 <figcaption>&lt;그림 2&gt; CXMT의 주요 경영실적</figcaption>
 <img src="PIC1129001193.BMP" alt="&lt;그림 2&gt; CXMT의 주요 경영실적" style="width:70%; max-width:100%; height:auto;">
 </figure>
-<p class="note-source-unit">* 자료 : CXMT. (김재현(그래픽 윤성정), 2026) 재인용</p>
+<p class="table-note">* 자료 : CXMT. (김재현(그래픽 윤성정), 2026) 재인용</p>
 <p>CXMT는 2023년과 2024년 순손실을 기록하였으나 2025년 18.7억 위안의 순이익을 기록하였으며, 2026년 1분기에는 무려 247.6억 위안의 순이익을 달성하였다. 2026년 상반기 매출과 순이익은 무려 전년 동기 대비 각각 677%와 2,544% 증가할 전망이다.</p>
 <p>파운드리 기업인 SMIC는 글로벌 파운드리 시장 점유율이 2024년 5.7%에서 2025년 5.32%로 소폭 하락하였으나 여전히 TSMC와 삼성전자에 이어 3위를 유지하였다. 2025년 매출액은 전년 대비 무려 16.2% 증가한 93.3억 달러를 기록하였다(TrendForce, 2026).</p>
 <h2>5. 결론</h2>
 <p>미국의 대중국 반도체 통제는 다양한 영역에서 전반적으로 강화하는 추세이다. 우선 개별 기업에 대한 통제에서 특정 분야의 대중국 전체에 대한 통제로 진화하였다. 또한 미국 단독으로 중국에 대한 반도체를 통제하다 동맹국과 연합하여 공동으로 통제하였다. 예컨대, 미국산 반도체 생산설비의 대중국 수출통제에서 네덜란드와 일본에 대해 대중국 통제에 참여하도록 요구하여 관철하였다. 셋째, 반도체 관련 첨단 공정 장비에 대한 수출통제에서 점차 범용장비에 대한 수출통제로 통제 범위를 대폭 확장하였다. 넷째, 일반 반도체 칩보다는 AI 반도체에 대한 수출통제를 강화함으로써 중국의 AI 산업의 부상을 저지하려 하였다. 다섯째, 중국 로컬 반도체 기업에 대한 통제뿐만 아니라 중국에 반도체 생산공장을 두고 있는 외자기업에 대한 통제까지 확장하였다. 특히 한국과 대만의 중국 내 생산공장에 반도체 생산설비를 반입할 때 미국 상무부의 허가를 받도록 하였다.</p>
 <p>전반적으로 미국의 대중국 반도체 통제가 강화한 것은 사실이지만, 2기 트럼프 정부는 반도체 통제의 유연성을 발휘하기도 하였다. 초기에는 AI 반도체인 H20의 대중국 수출을 통제하였으나 그 후 중국의 AI 반도체 자립을 우려하여 고성능 반도체 칩에 해당하는 H200의 대중국 수출을 조건부로 허가하기도 하였다. 또한 2기 트럼프 정부는 바이든 정부에서 상대적으로 느슨했던 미국 반도체 설계 기업의 기술 및 소프트웨어의 중국 수출통제를 강화하였으나 중국의 희토류 수출을 허가하는 조건으로 다시 완화하기도 하였다. 이는 미국 정부의 대중국 반도체 수출통제의 일관성이 부족하다기보다는 유연성을 발휘하는 것이 미국의 국익이 유리하다는 판단에 따른 것이라고 보아야 할 것이다.</p>
 <p>한국으로서는 미국 정부가 어느 정도 대중국 반도체 통제를 강화하고 그 영향이 어떤지 모니터링하는 것이 매우 중요하다. 그러나 더 주목해야 할 것은 미국의 통제 속에서 중국의 반도체 생태계가 구축되었고 분야별로 상당한 성과를 내고 있다는 것이다. 이런 상황에서 한국이 중국과의 반도체 칩에서 격차를 유지하기 위해 어떻게 반도체 생태계를 구축하고 이를 위해 제도적, 재정적 지원을 강화할 것인지 고민해야 할 것이다.</p>
+<p class="table-note"></p>
 <h2 class="references-heading">참고문헌</h2>
 <p>구기보, 유은정 (2025). 중국 정부의 반도체 산업 육성 정책의 성과 분석. 한중사회과학연구. 23(3), 86-101.</p>
 <p>김재현 (2026). 칩플레이션에 순익 1688%…&quot;삼성·SK 잡아라&quot; 상장 러시. 머니투데이. 5월 24일. https://n.news.naver.com/mnews/hotissue/article/008/0005362096?type=series&amp;cid=1088138</p>

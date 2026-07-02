@@ -93,7 +93,7 @@ sup {
 }
 
 .figure {
-    margin: 2em 0;
+    margin: 0.5em 0;
     text-align: center;
 }
 
@@ -103,16 +103,60 @@ sup {
 }
 
 .figure figcaption {
-    margin-top: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    margin-top: 2em;
     font-size: 0.95em;
-    color: #444;
+    color: #222;
 }
 
-.note-source-unit {
+.table-wrap {
+    margin: 2em 0;
+}
+
+.table-caption {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    color: #222
+}
+
+.table-unit {
+    text-align: right;
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.data-table th,
+.data-table td {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 0.45em 0.6em;
+    text-align: center;
+}
+
+.data-table thead th {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: 2px solid #000;
+}
+
+.table-note {
     font-size: 0.85em;
-    color: #555;
     line-height: 1.5;
-    margin: 0.4em 0;
+    margin-top: 0.2em;
+    color: #333;
 }
 </style>
 </head>
@@ -144,8 +188,36 @@ sup {
 <p>미국과 중국의 AI 반도체 경쟁은 산업정책과 외교정책이 상호 연계된 복합적 전략경쟁의 양상을 띠고 있다. 미국은 내부 역량 강화와 외부 통제, 중국은 자립화 투자와 비대칭적 보복을 각각 추구하고 있다. 글로벌 반도체 공급망이 미국 주도의 첨단 공정 공급망과 중국 주도의 성숙 공정 공급망으로 이원화될 경우, 제3국 기업들은 제재 준수와 시장 접근 사이에서 전략적 선택을 강요받게 된다.</p>
 <p>경제안보 관점에서 미중 경쟁은 단순한 기술 우월성 다툼을 넘어 글로벌 공급망 재편, 동맹국 관계 관리, 장기적 기술 생태계 주도권 확보라는 다차원적 과제를 제기한다. 양국이 보호주의를 극단적으로 밀어붙일 경우, 글로벌 혁신 속도가 저하되고 경제적 비용이 증대될 위험이 존재한다.</p>
 <p>이러한 상황에서는 경제안보 강화와 글로벌 협력 사이의 균형을 모색하는 정교한 정책 설계가 요구된다. 어느 한쪽으로 일방적 편승은 경제안보의 강화보다는 약화로 귀결될 가능성이 더 높다. 한국과 같은 중간국가는 양측의 기술 생태계 내에서 전략적 유연성을 유지하며 핵심 기술 경쟁력을 강화해야 한다.</p>
-<div class="placeholder">[Table omitted (see PDF): &lt;표 1&gt; 미중 반도체 전략 비교]</div>
-<p class="note-source-unit">* 자료 : 저자 작성</p>
+<div class="table-wrap">
+  <div class="table-caption">&lt;표 1&gt; 미중 반도체 전략 비교</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>미국</th>
+        <th>중국</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>전략적<br>목표</td>
+        <td>중국 추격 방지<br>자국 제조 역량 부활</td>
+        <td>미국의 기술 봉쇄를 돌파<br>독자적인 반도체 공급망을 완성</td>
+      </tr>
+      <tr>
+        <td>산업 정책</td>
+        <td>CHIPS법 중심 보조금·세제 혜택<br>글로벌 제조 파운드리 자국 내 유치<br>민간 혁신 생태계(엔비디아 등) 극대화</td>
+        <td>반도체 대기금 기반 국가 주도 투자<br>핵심 장비·소재의 100% 국산 대체<br>성숙 공정(레거시) 시장 선점 및 확장</td>
+      </tr>
+      <tr>
+        <td>경제적<br>강압</td>
+        <td>첨단 AI 칩 및 제조 장비 수출 통제<br>Chip 4 동맹 등 다자간 중국 배제망 구축<br>대중 첨단 분야 자본 투자 금지</td>
+        <td>갈륨·게르마늄 등 핵심 원자재 수출 규제<br>특정 미국 기업 시장 제한<br>비서방 국가(글로벌 사우스) 중심 공급망 확장</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table-note">* 자료 : 저자 작성</div>
+</div>
 <h2 class="references-heading">참고문헌</h2>
 <p>Gregory C. Allen (2025). DeepSeek, Huawei, Export Controls, and the Future of the U.S.-China AI Race, Center for Strategic and International Studies.</p>
 <p>Kyle Chan (2026). Competing AI strategies for the US and China, Brookings Institution.</p>
